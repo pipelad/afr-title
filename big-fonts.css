@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+:root {
+	--dark-blue: #003049;
+	--red: #D62828;
+	--orange: #F77F00;
+	--yelow: #FCBF49;
+	--merengue: #EAE2B7;
+}
+
+body {
+	background-color: var(--dark-blue);
+	min-height: 100vh;
+	font-family: 'Roboto Mono', monospace;
+}
+
+#grid-cuadratica {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
+	overflow: hidden;
+}
+
+#name {
+	grid-column: 1 / -1;
+	font-size: 1.43ch;
+	font-family: 'Roboto Mono', monospace;
+	text-transform: none;
+	color: var(--merengue);
+	line-height: .8ch;
+}
+
+#fonts1 {
+	grid-column: 1 / -1;
+	display: flex;
+	padding: 2rem;
+	align-items: center;
+	justify-content: center;
+}
+#fonts1 h1 {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(7, 1ch);
+	text-transform: uppercase;
+	font-size: 4rem;
+	font-weight: 700;
+	font-family: 'Archivo Black', sans-serif;
+	position: relative;
+}
+
+h1 #h1--fword {
+	grid-column: 1 / -1;
+	grid-row: 2 / span 3;
+	font-size: 3ch;
+	line-height: 1.5ch;
+	color: var(--red);
+	text-indent: -.1ch;
+}
+h1 #h1--fword span {
+	color: var(--yelow);
+}
+
+h1 #h1--sword {
+	line-height: 1.3ch;
+	grid-row: 5 / span 1;
+	color: var(--merengue);
+}
+
+h1 #h1--tword {
+	grid-column: 2 / -1;
+	grid-row: 5 / span 3;
+	font-size: 4ch;
+	line-height: 1.1ch;
+	font-stretch: ultra-condensed;
+	color: transparent;
+	background: linear-gradient(to right, var(--orange), var(--yelow));
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+h1 #huge-circle {
+	position: absolute;
+	grid-column-start: 2;
+	top: -15ch;
+	height: 100vw;
+	width: 100vw;
+	background-color: rgba(255, 255, 255, .1);
+	border-radius: 50%;
+	z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+	#fonts1 h1 {
+		font-size: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	#fonts1 h1 {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	#fonts1 h1 {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	#fonts1 h1 {
+		font-size: 1.1rem;
+	}
+}
